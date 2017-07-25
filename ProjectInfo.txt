@@ -1,0 +1,108 @@
+
+=========================== Tools and Technologies used in HibernateExample ==========================
+Technologies:
+	- Java 8
+	- Spring Boot 1.5
+	- Hibernate 5.0
+	- Hibernate Java8 5.0
+	- Log4j
+	- Sprint Boot Test (JUnit)
+
+Database:
+	- MS SQL Server 2012
+	
+Tools:
+	- IDE : Eclipse LUNA
+	- Database Client : SQL Server Management Studio
+	- Build : Maven 3.3.9
+	- Test Client : Postman
+
+URLs:
+	- Create Operation : http://localhost:8080/springplushibernate/create
+		Request Type : POST
+		Input JSON Object Sample : {
+								"userName": "user23rdJuly",
+								"createdBy": "Admin"
+							 }
+	
+	- Read Operation : http://localhost:8080/springplushibernate/read
+		Request Type : POST
+		Input JSON Object Sample : {
+										"userId": 109
+								   }
+								 
+		Ouput JSON Object Sample : {
+										"userId": 109,
+										"userName": "updateduser23rdJuly",
+										"createdBy": "Admin",
+										"updatedDate": {
+															"year": 2017,
+															"month": "JULY",
+															"dayOfMonth": 23,
+															"dayOfWeek": "SUNDAY",
+															"dayOfYear": 204,
+															"era": "CE",
+															"leapYear": false,
+															"monthValue": 7,
+															"chronology": {
+																				"id": "ISO",
+																				"calendarType": "iso8601"
+																		  }
+														}
+									}
+								
+	- Read All Operation : http://localhost:8080/springplushibernate/readAll
+		Request Type : GET
+		Output JSON Object Sample : [
+										{
+											"userId": 104,
+											"userName": "Rounak Verma TCS",
+											"createdBy": "669517",
+											"updatedDate": {
+																"year": 2017,
+																"month": "JULY",
+																"dayOfMonth": 22,
+																"dayOfWeek": "SATURDAY",
+																"dayOfYear": 203,
+																"era": "CE",
+																"leapYear": false,
+																"monthValue": 7,
+																"chronology": {
+																					"id": "ISO",
+																					"calendarType": "iso8601"
+																			  }
+															}
+										},
+										{
+											"userId": 109,
+											"userName": "updateduser23rdJuly",
+											"createdBy": "Admin",
+											"updatedDate": {
+																"year": 2017,
+																"month": "JULY",
+																"dayOfMonth": 23,
+																"dayOfWeek": "SUNDAY",
+																"dayOfYear": 204,
+																"era": "CE",
+																"leapYear": false,
+																"monthValue": 7,
+																"chronology": {
+																					"id": "ISO",
+																					"calendarType": "iso8601"
+																			  }
+															}
+										}
+									]
+									
+	- Update Operation : http://localhost:8080/springplushibernate/update
+		Request Type : POST
+		Input JSON Object : {
+								"userId": 109,
+								"userName" : "updateduser23rdJuly"
+							}
+							
+	- Delete Operation : http://localhost:8080/springplushibernate/delete
+		Request Type : POST
+		Input JSON Object : {
+								"userId": 109
+							}
